@@ -16,7 +16,7 @@ def generate_password():
     
     for x in range(password_length):
         password.append(random.choice(characters))
-    random.shuffle
+    random.shuffle(characters)
     password = "".join(password)
     
     print(password)
@@ -26,9 +26,9 @@ def generate_password():
     
 option = input("Do you want to generate a password? (yes/no): ")
 
-if option == "yes".lower():
+if option == "yes":
     generate_password()
-elif option == "no".lower():
+elif option == "no":
     print()
     print("program ended")
     quit()
